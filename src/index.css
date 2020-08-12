@@ -5,4 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  color: #33cfff;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #33cfff;
+  color: black;
+}
+
+a:visited {
+  color: #f372f7; 
+}
+
+a:visited:hover {
+  background-color: #f372f7;
+  color: black;
 }

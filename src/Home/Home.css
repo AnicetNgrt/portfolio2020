@@ -1,0 +1,43 @@
+#nom {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:10%;
+    left:50%;
+    font-size: 7vw;
+    background-color: black;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: white;
+    width: fit-content;
+    /*background-color: darkslategrey;*/
+}
+
+#portfolio {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:10rem;
+    left:50%;
+    font-size: 1.6vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    width: fit-content;
+}
+
+#socialContainer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    width:18rem;
+}
+
+#socialLink {
+    font-size: 4rem;
+    display: inline-block;
+    text-align:center;
+    border-radius: 4rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

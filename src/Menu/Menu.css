@@ -1,0 +1,8 @@
+.Menu {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:90%;
+    left:50%;
+    width: fit-content;
+    height: fit-content;
+}
