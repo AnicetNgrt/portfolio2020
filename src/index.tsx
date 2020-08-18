@@ -1,29 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App/App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+import LocalizationsManager from './configHandling/LocalizationsManager';
+import JsonFetcherImp from './configHandling/JsonFetcherImp';
 
 //guide https://www.freecodecamp.org/news/building-an-electron-application-with-create-react-app-97945861647c/
 
-declare global {
-  type Locs = { [key: string]: string }
-}
-
 async function launch() {
-
-  // initialising public/moddable local data
-  let locs:{[key:string]:Locs} = {};
-  let locSettings = await (await fetch('translations/metadata.json')).json();
-  for (var lang of locSettings["available"]) {
-    locs[lang] = await (await fetch('translations/'+lang+'.json')).json();
-  }
-  console.log(locs);
-  ReactDOM.render(
-    <React.StrictMode>
-      <App locs={locs}/>
-    </React.StrictMode>, document.getElementById('root')
-  );
+  let localizationsManager = new LocalizationsManager("localizations",new JsonFetcherImp());
+  localizationsManager.getLocalizations()
+  .then(locs=>{
+    console.log(locs);
+    ReactDOM.render(
+      <React.StrictMode>
+        <App locs={locs}/>
+      </React.StrictMode>, document.getElementById('root')
+    );
+  })
+  .catch(reason=>console.log(reason));
 }
 
 launch()

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Localization} from '../../api/types';
 import './App.css';
 import HomeComponent from '../Home/Home';
 import MenuComponent from '../Menu/Menu';
@@ -19,7 +20,7 @@ function openOutside(event:any, link:string) {
 }
 
 function App(props:{
-  locs:{[key:string]:Locs};
+  locs:{[key:string]:Localization};
 }) {
   const [current, setCurrent] = React.useState("Home");
   const [lang, setLang] = React.useState("en");
