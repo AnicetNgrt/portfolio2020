@@ -6,7 +6,8 @@ import {
 import "./CustomLink.css";
 
 export default function CustomLink(props:{
-    label:string, 
+    label:string,
+    selected:boolean,
     to:string,
     activeOnlyWhenExact:boolean,
     onClick:(place:string)=>void
@@ -26,7 +27,7 @@ export default function CustomLink(props:{
     }
 
     return(
-        <div className="CustomLink">
+        <div className={"CustomLink "+(props.selected ? "selected":"unselected")}>
             <Link to={props.to} >{props.label}</Link>
         </div>
     )

@@ -1,7 +1,8 @@
 import React from "react";
+import {Localization} from "../../api/types";
 
 export default function AboutComponent(props:{
-    locs:Locs
+    locs:Localization
 }) {
     return (
         <div>

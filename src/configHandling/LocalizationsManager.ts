@@ -19,8 +19,8 @@ export default class LocalizationsManager {
     private getAvailableLocalizationsKeys(): Promise<string[]> {
       return new Promise((resolve,reject)=>{
         this.jsonFetcher.getObjectFromFile(path.join(this.directory,'metadata.json'))
-        .then((keys:string[])=>{
-            resolve(keys);
+        .then((metadata:any)=>{
+            resolve(metadata.available);
         })
         .catch(reason=>{
             console.error(reason);
@@ -33,10 +33,10 @@ export default class LocalizationsManager {
       return new Promise((resolve, reject)=>{
         this.getAvailableLocalizationsKeys()
         .then(async (keys:string[])=>{
-            let asyncFetches = [];
-            for (var lang of keys) {
-                asyncFetches.push(this.getKeyAndLocalizationFromKey(lang));
-            }
+            let asyncFetches: any[] = [];
+            keys.forEach(key=> {
+                asyncFetches.push(this.getKeyAndLocalizationFromKey(key));
+            })
             Promise.all(asyncFetches)
             .then(locsArray => {
                 let locsDict:{[key:string]:Localization} = {};

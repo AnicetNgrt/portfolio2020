@@ -9,10 +9,9 @@ import JsonFetcherImp from './configHandling/JsonFetcherImp';
 //guide https://www.freecodecamp.org/news/building-an-electron-application-with-create-react-app-97945861647c/
 
 async function launch() {
-  let localizationsManager = new LocalizationsManager("localizations",new JsonFetcherImp());
+  let localizationsManager = new LocalizationsManager("translations",new JsonFetcherImp());
   localizationsManager.getLocalizations()
   .then(locs=>{
-    console.log(locs);
     ReactDOM.render(
       <React.StrictMode>
         <App locs={locs}/>

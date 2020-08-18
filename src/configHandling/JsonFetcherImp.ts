@@ -12,7 +12,6 @@ export default class JsonFetcherImp implements JsonFetcher {
             if (!response.ok) {
                 throw new Error("HTTP error " + response.status);
             }
-            console.log(response);
             return response.json();
         })
         .then(json => {

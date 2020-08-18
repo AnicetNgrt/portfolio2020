@@ -1,5 +1,5 @@
 .CustomLink {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-block;
 }
 
@@ -7,16 +7,22 @@
     text-decoration: none;
     border: solid 0.2rem #33cfff8c;
     display: block;
-    min-width: 6rem;
+    min-width: 5rem;
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border-radius: 0.5rem;
     margin: 0.5rem;
     user-select: none;
 }
 
-.CustomLink a:hover {
+.CustomLink.selected a {
+    background-color: white;
+    border: solid 0.2rem transparent;
+    color: black;
+}
+
+.CustomLink.unselected a:hover {
     background-color: #33cfff;
     color: black;
 }
@@ -25,7 +31,7 @@
     color: #f372f7; 
 }
 
-.CustomLink a:visited:hover {
+.CustomLink.unselected a:visited:hover {
     background-color: #f372f7;
     color: black;
 }

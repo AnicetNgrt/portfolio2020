@@ -1,6 +1,7 @@
 import React from "react";
 import "./Projects.css";
 import {IoIosConstruct} from "react-icons/io";
+import {Localization} from "../../api/types";
 const {electron} = window as any;
 
 const linkedinLink = "https://www.linkedin.com/in/anicet-nougaret-b7846b174/"
@@ -13,7 +14,7 @@ function openOutside(event:any, link:string) {
 }
 
 export default function projectsComponent(props:{
-    locs:Locs
+    locs:Localization
 }) {
     return (
         <div>

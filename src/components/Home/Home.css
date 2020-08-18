@@ -1,7 +1,7 @@
 #top {
     position: absolute;
     transform: translate(-50%, 0%);
-    top: 0;
+    top: 12%;
     left:50%;
     width: fit-content;
     max-width: 35rem;
@@ -13,7 +13,7 @@
     font-size: 4rem;
     line-height: 3.5rem;
     font-weight: bold;
-    color: #33cfff;
+    color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: 0;
@@ -33,9 +33,9 @@
 }
 
 #socialContainer {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:45%;
+    position: relative;
+    transform: translate(-50%, 0%);
+    margin-top: 1rem;
     left:50%;
     width: 18rem;
     height: 15rem;
@@ -61,6 +61,17 @@
 }
 
 #socialLink:hover {
-    background-color: #33cfff;
+    animation: lightsOn 0.2s ease-out;
+    background-color: white;
     color: black;
+}
+
+@keyframes lightsOn {
+    from {
+        background-color: #33cfff;
+    }
+
+    to {
+        background-color: white;
+    }
 }
