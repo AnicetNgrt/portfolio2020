@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import {AiFillGithub, AiFillCode, AiFillLinkedin, AiFillInstagram} from "react-icons/ai"
 import {MdGames, MdEmail} from "react-icons/md"
@@ -21,16 +21,23 @@ function openOutside(event:any, link:string) {
 export default function HomeComponent(this: any, props:{
     locs:Locs
 }) {
+
+    const [icoDesc, setIcoDesc] = useState("")
+
     return (
         <div>
-            <h1 id="nom">{"Anicet Nougaret"}</h1>
+            <div id="top">
+                <h1>{"Anicet Nougaret"}</h1>
+                <p>{props.locs["11"]}</p>
+            </div>
             <div id="socialContainer">
-                <a id="socialLink" href={githubLink} onClick={e=>openOutside(e,githubLink)}><AiFillGithub/>{""}</a>
-                <a id="socialLink" href={replLink} onClick={e=>openOutside(e,replLink)}><AiFillCode/>{""}</a>
-                <a id="socialLink" href={itchLink} onClick={e=>openOutside(e,itchLink)}><MdGames/>{""}</a>
-                <a id="socialLink" href={linkedinLink} onClick={e=>openOutside(e,linkedinLink)}><AiFillLinkedin/>{""}</a>
-                <a id="socialLink" href={instaLink} onClick={e=>openOutside(e,instaLink)}><AiFillInstagram/>{""}</a>
-                <a id="socialLink" href={"mailto:"+email}><MdEmail/>{""}</a>
+                <a id="socialLink" href={githubLink} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["3"])} onClick={e=>openOutside(e,githubLink)}><AiFillGithub/>{""}</a>
+                <a id="socialLink" href={replLink} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["4"])} onClick={e=>openOutside(e,replLink)}><AiFillCode/>{""}</a>
+                <a id="socialLink" href={itchLink} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["5"])} onClick={e=>openOutside(e,itchLink)}><MdGames/>{""}</a>
+                <a id="socialLink" href={linkedinLink} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["6"])} onClick={e=>openOutside(e,linkedinLink)}><AiFillLinkedin/>{""}</a>
+                <a id="socialLink" href={instaLink} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["7"])} onClick={e=>openOutside(e,instaLink)}><AiFillInstagram/>{""}</a>
+                <a id="socialLink" href={"mailto:"+email} onMouseLeave={()=>setIcoDesc("")} onMouseEnter={()=>setIcoDesc(props.locs["8"])}><MdEmail/>{""}</a>
+                {icoDesc !== "" && <h2 id="icoDesc">{icoDesc}</h2>}
             </div>
         </div>
     )

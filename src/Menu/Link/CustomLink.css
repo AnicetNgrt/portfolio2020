@@ -4,6 +4,28 @@
 }
 
 .CustomLink a {
+    text-decoration: none;
+    border: solid 0.2rem #33cfff8c;
+    display: block;
+    min-width: 6rem;
+    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    user-select: none;
+}
+
+.CustomLink a:hover {
+    background-color: #33cfff;
+    color: black;
+}
+
+.CustomLink a:visited {
+    color: #f372f7; 
+}
+
+.CustomLink a:visited:hover {
+    background-color: #f372f7;
+    color: black;
 }

@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -26,19 +27,49 @@ p {
 a {
   font-family: 'Open Sans', sans-serif;
   color: #33cfff;
+  cursor: pointer;
+}
+
+.link {
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+  color: #33cfff;
   text-decoration: none;
+  cursor: pointer;
 }
 
-a:hover {
-  background-color: #33cfff;
-  color: black;
+.link:hover {
+  background-color: transparent;
+  text-decoration: underline solid #33cfff;
+  color: #33cfff;
 }
 
-a:visited {
+.link:visited {
+  background-color: transparent;
   color: #f372f7; 
 }
 
-a:visited:hover {
-  background-color: #f372f7;
-  color: black;
+.link:visited:hover {
+  background-color: transparent;
+  text-decoration: underline solid currentColor;
 }
+
+ /* width */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #33cfff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0, 0.65);
+} 

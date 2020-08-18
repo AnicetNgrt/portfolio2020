@@ -1,34 +1,52 @@
-#nom {
+#top {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top:10%;
+    transform: translate(-50%, 0%);
+    top: 0;
     left:50%;
-    font-size: 7vw;
-    background-color: black;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    color: white;
     width: fit-content;
-    /*background-color: darkslategrey;*/
+    max-width: 35rem;
+    height: fit-content;
+    text-align: center;
 }
 
-#portfolio {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:10rem;
-    left:50%;
-    font-size: 1.6vw;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    width: fit-content;
+#top h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    color: #33cfff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    user-select: none;
+}
+
+#top p {
+    color:white;
+    margin: 0;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    user-select: none;
 }
 
 #socialContainer {
     position: absolute;
     transform: translate(-50%, -50%);
-    top:50%;
+    top:45%;
     left:50%;
-    width:18rem;
+    width: 18rem;
+    height: 15rem;
+}
+
+#icoDesc {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.25rem;
+    user-select: none;
 }
 
 #socialLink {
@@ -40,4 +58,9 @@
     padding-bottom: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+#socialLink:hover {
+    background-color: #33cfff;
+    color: black;
 }
